@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Counter</title>
+</head>
+<body>
+
+<h1 id="marks">50</h1>
+
+<button id="add">Add Bonus Marks</button>
+<button id="deduct">Deduct Marks</button>
+
+<script>
+    let marks = 50;
+
+    let heading = document.querySelector("#marks");
+    let addBtn = document.querySelector("#add");
+    let deductBtn = document.querySelector("#deduct");
+
+    function addMarks() {
+        marks = marks + 5;
+        heading.innerHTML = marks;
+    }
+
+    function deductMarks() {
+        marks = marks - 5;
+        heading.innerHTML = marks;
+    }
+
+    addBtn.addEventListener("click", addMarks);
+    deductBtn.addEventListener("click", deductMarks);
+</script>
+
+</body>
+</html>
+
